@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Javascript Lab 12</title>
+    <!--    dit script: gebruikt de while()-lus    -->
+<script type="text/javascript"
+    src = "myjavascript.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+var doorgaan = true;
+    var index = 0;	
+	punten = 0;
+    while (doorgaan) {
+        index++;
+        resultaat = toets(index);		
+        doorgaan = confirm(resultaat + " Wil je doorgaan?");
+        if (index == 11) break;
+        document.writeln("vraag " + index + " was " + resultaat + "<br />");
+			if(resultaat == "Correct!!!"){
+	punten +=1;
+	}else{
+	punten +=0;
+	}
+    }
+
+document.writeln("Jouw score is " + punten );
+</script>
+</body>
+</html> 
